@@ -290,9 +290,11 @@ body {
 }
 
 .icono {
-  margin-right: 8px;
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
   vertical-align: middle;
-  color: var(--color-principal);
+  margin-right: 0.5em;
 }
 
 .mantenimiento-js {
