@@ -1,5 +1,3 @@
-import "@fortawesome/fontawesome-free/css/all.min.css";
-
 document.addEventListener("DOMContentLoaded", () => {
   const boton = document.querySelector(".boton-saber-mas");
   const mensaje = document.querySelector(".texto-mantenimiento");
