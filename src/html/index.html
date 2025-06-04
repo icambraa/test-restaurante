@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurante Pekin en Lleida</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="icon" type="image/png" href="../img/favicon-32x32.png" />
+  </head>
+  <body>
+    <a href="#contenido-principal" class="saltar-al-contenido"
+      >Saltar al contenido</a
+    >
+    <header class="cabecera">
+      <div class="contenedor">
+        <div class="logotipo">
+          <a href="index.html">
+            <picture>
+              <source
+                srcset="../img/restaurante-logo.png?as=avif&width=320"
+                type="image/avif"
+              />
+              <source
+                srcset="../img/restaurante-logo.png?as=webp&width=320"
+                type="image/webp"
+              />
+              <img
+                src="../img/restaurante-logo.png?width=320"
+                class="imagen-logo"
+                alt="Restaurante logo"
+              />
+            </picture>
+          </a>
+        </div>
+        <nav class="navbar">
+          <ul>
+            <li><a href="menu.html">Menú</a></li>
+            <li><a href="enlaces.html">Enlaces</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="bienvenida">
+      <div class="contenido-bienvenida">
+        <h2>Animate y date un capricho</h2>
+        <p>¡Descubra la auténtica gastronomía oriental!</p>
+        <a href="menu.html" class="boton-bienvenida">Ver Menú</a>
+      </div>
+      <a href="#quienes-somos" class="flecha-centro">
+        <svg
+          width="80"
+          height="80"
+          viewBox="0 0 60 60"
+          class="flecha-personalizada"
+        >
+          <path
+            d="M15 20 L30 40 L45 20"
+            stroke="white"
+            stroke-width="4"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </a>
+    </section>
+
+    <main id="contenido-principal" class="contenido-principal">
+      <div class="decoracion-lateral izquierda">北京中國餐廳北京中國</div>
+      <div class="decoracion-lateral derecha">北京中國餐廳北京中國</div>
+      <section id="quienes-somos" class="quienes-somos">
+        <h2 class="titulo-seccion">- ¿Quiénes somos? -</h2>
+
+        <section class="sobre-nosotros">
+          <div class="texto-sobre-nosotros">
+            <h3>Sobre nosotros</h3>
+            <p>
+              Pekin lleida, fue fundado en 2003, es el restaurante de comida
+              asiática de referencia de Catalunya. Contamos con un equipo de
+              profesional cualificado para prestar un servicio de calidad. El
+              equipo de cocineros de restaurante Pekín, elabora todos nuestros
+              platos con gran cuidado para que nuestros clientes puedan
+              disfrutarlo.
+            </p>
+          </div>
+
+          <div class="imagen-sobre-nosotros">
+            <picture>
+              <source
+                srcset="../img/sobre-nosotros.png?as=avif&width=600"
+                type="image/avif"
+              />
+              <source
+                srcset="../img/sobre-nosotros.png?as=webp&width=600"
+                type="image/webp"
+              />
+              <img
+                src="../img/sobre-nosotros.png?width=600"
+                alt="Retrato del equipo de Pekín Lleida"
+              />
+            </picture>
+          </div>
+        </section>
+
+        <section class="especialidad">
+          <div class="imagen-especialidad">
+            <picture>
+              <source
+                srcset="../img/pato-pekin.png?as=avif&width=600"
+                type="image/avif"
+              />
+              <source
+                srcset="../img/pato-pekin.png?as=webp&width=600"
+                type="image/webp"
+              />
+              <img
+                src="../img/pato-pekin.png?width=600"
+                alt="Nuestro famoso Pato Pekín"
+              />
+            </picture>
+          </div>
+
+          <div class="texto-especialidad">
+            <h3>Nuestra especialidad</h3>
+            <p>
+              El pato cantonés se caracteriza por su piel crujiente y dorada,
+              que envuelve una carne jugosa y sabrosa. Su elaboración requiere
+              de un proceso meticuloso que incluye marinar la carne con especias
+              y hierbas aromáticas, y luego asarla lentamente hasta obtener esa
+              textura tan característica.
+            </p>
+            <p>
+              En la sección de menú puedes consultar el resto de platos.
+              <a href="menu.html" class="enlace-menu">Ver menú</a>
+            </p>
+          </div>
+        </section>
+      </section>
+
+      <div class="separador"></div>
+
+      <section class="ubicacion">
+        <h2 class="titulo-seccion">- ¿Dónde estamos? -</h2>
+        <p>
+          Nos puedes encontrar en el corazón de Lleida, a orillas del rio Segre.
+          Se trata de una ubicación céntrica y de fácil acceso. Ven a visitarnos
+          y disfruta de nuestra comida.
+        </p>
+        <p>
+          <i class="fas fa-map-marker-alt icono"></i> Dirección:
+          <span>Carrer Maragall, Lleida</span><br />
+          <i class="fas fa-phone-alt icono"></i> Teléfono:
+          <span>+34 *** *** ***</span><br />
+          <i class="fas fa-clock icono"></i> Horario:
+          <span>De Lunes a Domingo, de 13:00 a 23:00</span>
+        </p>
+
+        <div class="imagen-ubicacion">
+          <picture>
+            <source
+              media="(max-width:600px)"
+              srcset="
+                ../img/lleida-vertical.png?as=avif&width=500  1x,
+                ../img/lleida-vertical.png?as=avif&width=1000 2x
+              "
+              type="image/avif"
+            />
+            <source
+              media="(max-width:600px)"
+              srcset="
+                ../img/lleida-vertical.png?as=webp&width=500  1x,
+                ../img/lleida-vertical.png?as=webp&width=1000 2x
+              "
+              type="image/webp"
+            />
+            <source
+              media="(min-width:601px)"
+              srcset="
+                ../img/lleida-horizontal.png?as=avif&width=800  1x,
+                ../img/lleida-horizontal.png?as=avif&width=1600 2x
+              "
+              type="image/avif"
+            />
+            <source
+              media="(min-width:601px)"
+              srcset="
+                ../img/lleida-horizontal.png?as=webp&width=800  1x,
+                ../img/lleida-horizontal.png?as=webp&width=1600 2x
+              "
+              type="image/webp"
+            />
+            <img
+              src="../img/lleida-horizontal.png?width=800"
+              alt="Panorámica del río Segre y la Seu Vella"
+            />
+          </picture>
+        </div>
+      </section>
+
+      <div class="mantenimiento-js">
+        <button class="boton-saber-mas">Saber más</button>
+        <p class="texto-mantenimiento" style="display: none">
+          Esto se ha hecho para añadir algo sencillo con js y comprobar que
+          funciona correctamente
+        </p>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p>Icambra - P1 Desarrollo de una web HTML Y CSS 1</p>
+    </footer>
+    <script type="module" src="../js/app.js"></script>
+  </body>
+</html>

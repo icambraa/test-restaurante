@@ -1,0 +1,625 @@
+/* ============================= */
+/*           VARIABLES           */
+/* ============================= */
+
+.testing-autoprefixer {
+  user-select: none;
+}
+
+:root {
+  --color-principal: #cf3a2c;
+  --color-principal-oscuro: #83180c;
+  --color-negro: #000000;
+  --color-blanco: #ffffff;
+}
+
+/* ============================= */
+/*           GENERALES           */
+/* ============================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--color-blanco);
+  display: flex;
+  flex-direction: column;
+}
+
+.cabecera {
+  background-color: var(--color-negro);
+
+  .contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+}
+
+.imagen-logo {
+  max-height: 64px;
+  width: auto;
+  margin: 16px;
+}
+
+.navbar {
+  padding: 0 16px;
+
+  ul {
+    list-style: none;
+    display: flex;
+    gap: 16px;
+  }
+
+  a {
+    color: var(--color-blanco);
+    text-decoration: none;
+    font-weight: bold;
+
+    &:hover {
+      color: var(--color-principal);
+    }
+  }
+}
+
+.saltar-al-contenido {
+  padding: 4px 8px;
+  background: var(--color-negro);
+  background-clip: border-box;
+  text-align: center;
+  color: var(--color-blanco);
+  text-decoration: none;
+  border-radius: 4px;
+  border: 1px solid var(--color-negro);
+  position: absolute;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  left: -200px;
+}
+
+.saltar-al-contenido:focus {
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  width: auto;
+  height: auto;
+}
+
+.footer {
+  padding: 16px;
+  background-color: var(--color-negro);
+  color: var(--color-blanco);
+}
+
+/* ============================= */
+/*             HOME              */
+/* ============================= */
+
+.bienvenida {
+  position: relative;
+  background: url("../img/restaurante-chino1.png") center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  clip-path: polygon(100% 0, 100% 92%, 50% 100%, 0 92%, 0 0);
+  margin-top: -1px; /* No se por qué pero al hacer clip-path me aparece un borde blacno, por eso lo oculto con margin-top */
+  background-attachment: fixed;
+}
+
+.flecha-centro {
+  position: absolute;
+  bottom: 120px;
+
+  svg {
+    animation: saltar 1.5s ease-in-out infinite;
+    opacity: 0.8;
+  }
+}
+
+@keyframes saltar {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.contenido-bienvenida {
+  color: var(--color-blanco);
+  padding: 32px;
+  animation: aparecer-hero 0.5s ease forwards;
+
+  h2 {
+    font-size: 36px;
+    margin-bottom: 18px;
+  }
+
+  p {
+    font-size: 20px;
+    margin-bottom: 35px;
+  }
+}
+
+.boton-bienvenida {
+  background-color: var(--color-principal);
+  color: var(--color-blanco);
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 18px;
+
+  &:hover {
+    background-color: var(--color-principal-oscuro);
+    transition: background-color 0.1s ease-in-out;
+  }
+}
+
+@keyframes aparecer-hero {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.contenido-principal {
+  max-width: 900px;
+  margin: 32px auto;
+  padding: 32px 16px;
+  position: relative;
+}
+
+.titulo-seccion {
+  margin-bottom: 48px;
+  font-size: 32px;
+  color: var(--color-negro);
+  text-align: center;
+}
+
+.sobre-nosotros,
+.especialidad {
+  display: flex;
+  align-items: center;
+  margin-bottom: 48px;
+  gap: 32px;
+}
+
+.imagen-sobre-nosotros {
+  clip-path: polygon(10% 0, 95% 0, 95% 100%, 10% 100%, 0% 50%);
+}
+.imagen-especialidad {
+  clip-path: polygon(90% 0, 5% 0, 5% 100%, 90% 100%, 100% 50%);
+}
+
+.imagen-sobre-nosotros,
+.imagen-especialidad {
+  img {
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.texto-sobre-nosotros,
+.texto-especialidad {
+  flex: 1;
+  line-height: 1.6;
+  margin: 0 40px;
+
+  h3 {
+    margin-bottom: 16px;
+    color: var(--color-principal);
+    font-size: 30px;
+  }
+
+  p {
+    margin-bottom: 16px;
+    text-align: justify;
+  }
+}
+.separador {
+  width: 10%;
+  height: 2px;
+  background-color: var(--color-principal);
+  margin: 48px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.ubicacion {
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
+  padding: 32px 16px;
+
+  h2 {
+    font-size: 32px;
+    margin-bottom: 24px;
+  }
+
+  p {
+    font-size: 16px;
+    margin-bottom: 19.2px;
+
+    span {
+      color: var(--color-principal);
+      font-weight: bold;
+    }
+  }
+}
+
+.imagen-ubicacion {
+  img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 32px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.enlace-menu {
+  color: var(--color-principal);
+  text-decoration: underline;
+
+  &:hover {
+    color: var(--color-principal-oscuro);
+    text-decoration: underline;
+  }
+}
+
+.icono {
+  margin-right: 8px;
+  vertical-align: middle;
+  color: var(--color-principal);
+}
+
+.mantenimiento-js {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.boton-saber-mas {
+  background-color: var(--color-principal);
+  color: var(--color-blanco);
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 3px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.1s ease-in-out;
+
+  &:hover {
+    background-color: var(--color-principal-oscuro);
+    transition: background-color 0.1s ease-in-out;
+  }
+}
+
+.texto-mantenimiento {
+  margin-top: 16px;
+  font-size: 16px;
+  color: var(--color-negro);
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .sobre-nosotros,
+  .especialidad {
+    flex-direction: column;
+  }
+
+  .texto-sobre-nosotros,
+  .texto-especialidad {
+    order: 1;
+    text-align: center;
+  }
+
+  .imagen-sobre-nosotros,
+  .imagen-especialidad {
+    order: 2;
+    display: flex;
+    justify-content: center;
+    clip-path: none;
+
+    img {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      margin-top: 16px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+  }
+}
+
+.decoracion-lateral {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 40px;
+  font-size: 100px;
+  color: var(--color-negro);
+  opacity: 0.3;
+  display: flex;
+  line-height: 200px;
+}
+
+.decoracion-lateral.izquierda {
+  left: -20%;
+}
+
+.decoracion-lateral.derecha {
+  right: -15%;
+}
+@media (max-width: 1400px) {
+  .decoracion-lateral {
+    display: none;
+  }
+}
+
+/* ============================= */
+/*             MENU              */
+/* ============================= */
+
+.lista-platos-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: center;
+}
+
+.tarjeta-plato {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-negro);
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  min-height: 450px;
+  animation: aparecer-plato 0.5s ease forwards;
+  opacity: 0;
+  max-width: 300px;
+
+  picture {
+    width: 100%;
+    display: block;
+  }
+
+  img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  .tarjeta-plato {
+    max-width: 270px;
+  }
+}
+
+.lista-platos-flex {
+  .tarjeta-plato:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+  .tarjeta-plato:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  .tarjeta-plato:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+  .tarjeta-plato:nth-child(4) {
+    animation-delay: 0.4s;
+  }
+  .tarjeta-plato:nth-child(5) {
+    animation-delay: 0.5s;
+  }
+  .tarjeta-plato:nth-child(6) {
+    animation-delay: 0.6s;
+  }
+  .tarjeta-plato:nth-child(7) {
+    animation-delay: 0.7s;
+  }
+  .tarjeta-plato:nth-child(8) {
+    animation-delay: 0.8s;
+  }
+  .tarjeta-plato:nth-child(9) {
+    animation-delay: 0.9s;
+  }
+}
+
+@keyframes aparecer-plato {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.contenido-plato {
+  padding: 16px;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  h3 {
+    margin-bottom: 8px;
+    color: var(--color-principal);
+  }
+
+  p {
+    margin-bottom: 12px;
+    color: var(--color-blanco);
+  }
+
+  a {
+    color: var(--color-principal);
+    text-decoration: none;
+    margin-top: auto;
+    text-align: right;
+    font-weight: bold;
+
+    &:hover {
+      color: var(--color-blanco);
+      text-decoration: none;
+    }
+  }
+}
+
+/* ============================= */
+/*    DETALLES DE LOS PLATOS     */
+/* ============================= */
+
+.detalle-plato {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 32px 16px;
+}
+
+.imagen-detalle {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+}
+
+.texto-detalle {
+  color: var(--color-negro);
+  line-height: 1.9;
+  font-size: 16.8px;
+  padding: 0 8px;
+  max-width: 700px;
+
+  p {
+    margin-bottom: 24px;
+  }
+
+  strong {
+    color: var(--color-principal);
+    font-weight: bold;
+  }
+
+  h3 {
+    color: var(--color-principal);
+    font-size: 28.8px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  ul {
+    padding-left: 24px;
+    margin-bottom: 24px;
+
+    li {
+      margin-bottom: 8px;
+    }
+  }
+}
+
+.imagenes-detalle {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 24px;
+
+  picture {
+    width: 30%;
+    min-width: 200px;
+  }
+
+  picture img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.video-detalle {
+  width: 100%;
+  max-width: 600px;
+  height: 400px;
+  margin-top: 24px;
+
+  iframe {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .imagenes-detalle {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  picture {
+    width: 90%;
+    max-width: 400px;
+  }
+}
+
+/* ============================= */
+/*         PÁGINA ENLACES        */
+/* ============================= */
+
+.pagina-enlaces {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  main {
+    flex: 1;
+  }
+
+  .contenido-principal {
+    padding: 32px 24px;
+
+    ul {
+      margin-top: 12px;
+      margin-bottom: 24px;
+      padding-left: 20px;
+      font-size: 16px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+  }
+}
