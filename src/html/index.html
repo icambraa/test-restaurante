@@ -192,49 +192,44 @@
           <picture>
             <source
               media="(max-width: 600px)"
-              type="image/avif"
               srcset="
-                ../img/lleida-vertical.png?as=avif&width=300 300w,
-                ../img/lleida-vertical.png?as=avif&width=600 600w
+                ../img/lleida-vertical.png?as=avif&width=300 1x,
+                ../img/lleida-vertical.png?as=avif&width=600 2x
               "
-              sizes="(max-width: 600px) 90vw"
+              type="image/avif"
             />
             <source
               media="(max-width: 600px)"
-              type="image/webp"
               srcset="
-                ../img/lleida-vertical.png?as=webp&width=300 300w,
-                ../img/lleida-vertical.png?as=webp&width=600 600w
+                ../img/lleida-vertical.png?as=webp&width=300 1x,
+                ../img/lleida-vertical.png?as=webp&width=600 2x
               "
-              sizes="(max-width: 600px) 90vw"
+              type="image/webp"
             />
+
             <source
               media="(min-width: 601px)"
+              srcset="
+                ../img/lleida-horizontal.png?as=avif&width=800  1x,
+                ../img/lleida-horizontal.png?as=avif&width=1600 2x
+              "
               type="image/avif"
-              srcset="
-                ../img/lleida-horizontal.png?as=avif&width=800   800w,
-                ../img/lleida-horizontal.png?as=avif&width=1600 1600w
-              "
-              sizes="(min-width: 601px) 800px"
             />
             <source
               media="(min-width: 601px)"
-              type="image/webp"
               srcset="
-                ../img/lleida-horizontal.png?as=webp&width=800   800w,
-                ../img/lleida-horizontal.png?as=webp&width=1600 1600w
+                ../img/lleida-horizontal.png?as=webp&width=800  1x,
+                ../img/lleida-horizontal.png?as=webp&width=1600 2x
               "
-              sizes="(min-width: 601px) 800px"
+              type="image/webp"
             />
+
             <img
-              src="../img/lleida-vertical.png?as=webp&width=300"
+              src="../img/lleida-horizontal.png?width=800"
               alt="Panorámica del río Segre y la Seu Vella"
               loading="lazy"
-              srcset="
-                ../img/lleida-vertical.png?as=webp&width=300 300w,
-                ../img/lleida-vertical.png?as=webp&width=600 600w
-              "
-              sizes="(max-width: 600px) 90vw, 800px"
+              width="100%"
+              height="auto"
             />
           </picture>
         </div>
