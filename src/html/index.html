@@ -199,32 +199,16 @@
             <source
               media="(max-width:600px)"
               srcset="
-                ../img/lleida-vertical.webp?as=avif&width=500  1x,
-                ../img/lleida-vertical.webp?as=avif&width=1000 2x
-              "
-              type="image/avif"
-            />
-            <source
-              media="(max-width:600px)"
-              srcset="
-                ../img/lleida-vertical.webp?as=webp&width=500  1x,
-                ../img/lleida-vertical.webp?as=webp&width=1000 2x
+                ../img/lleida-vertical.webp?width=500  1x,
+                ../img/lleida-vertical.webp?width=1000 2x
               "
               type="image/webp"
             />
             <source
               media="(min-width:601px)"
               srcset="
-                ../img/lleida-horizontal.webp?as=avif&width=800  1x,
-                ../img/lleida-horizontal.webp?as=avif&width=1600 2x
-              "
-              type="image/avif"
-            />
-            <source
-              media="(min-width:601px)"
-              srcset="
-                ../img/lleida-horizontal.webp?as=webp&width=800  1x,
-                ../img/lleida-horizontal.webp?as=webp&width=1600 2x
+                ../img/lleida-horizontal.webp?width=800  1x,
+                ../img/lleida-horizontal.webp?width=1600 2x
               "
               type="image/webp"
             />
@@ -234,6 +218,7 @@
               loading="lazy"
               width="800"
               height="533"
+              sizes="(max-width: 600px) 500px, 800px"
             />
           </picture>
         </div>
