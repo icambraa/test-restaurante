@@ -197,23 +197,35 @@
         <div class="imagen-ubicacion">
           <picture>
             <source
-              media="(max-width: 600px)"
+              media="(max-width:600px)"
               srcset="
-                ../img/lleida-vertical.webp?width=320 320w,
-                ../img/lleida-vertical.webp?width=480 480w,
-                ../img/lleida-vertical.webp?width=800 800w
+                ../img/lleida-vertical.webp?as=avif&width=500  1x,
+                ../img/lleida-vertical.webp?as=avif&width=1000 2x
               "
-              sizes="(max-width: 600px) 100vw"
+              type="image/avif"
+            />
+            <source
+              media="(max-width:600px)"
+              srcset="
+                ../img/lleida-vertical.webp?as=webp&width=500  1x,
+                ../img/lleida-vertical.webp?as=webp&width=1000 2x
+              "
               type="image/webp"
             />
             <source
-              media="(min-width: 601px)"
+              media="(min-width:601px)"
               srcset="
-                ../img/lleida-horizontal.webp?width=480   480w,
-                ../img/lleida-horizontal.webp?width=800   800w,
-                ../img/lleida-horizontal.webp?width=1200 1200w
+                ../img/lleida-horizontal.webp?as=avif&width=800  1x,
+                ../img/lleida-horizontal.webp?as=avif&width=1600 2x
               "
-              sizes="(min-width: 601px) 80vw"
+              type="image/avif"
+            />
+            <source
+              media="(min-width:601px)"
+              srcset="
+                ../img/lleida-horizontal.webp?as=webp&width=800  1x,
+                ../img/lleida-horizontal.webp?as=webp&width=1600 2x
+              "
               type="image/webp"
             />
             <img
