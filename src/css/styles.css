@@ -105,7 +105,7 @@ body {
 
 .bienvenida {
   position: relative;
-  background: url("../img/restaurante-chino1.webp") center;
+  background: url("../img/restaurante-chino1.png") center;
   background-size: cover;
   display: flex;
   align-items: center;
