@@ -193,7 +193,7 @@
             <source
               media="(max-width:600px)"
               srcset="
-                ../img/lleida-vertical.png?as=avif&width=300  1x,
+                ../img/lleida-vertical.png?as=avif&width=300 1x,
                 ../img/lleida-vertical.png?as=avif&width=600 2x
               "
               type="image/avif"
@@ -201,7 +201,7 @@
             <source
               media="(max-width:600px)"
               srcset="
-                ../img/lleida-vertical.png?as=webp&width=300  1x,
+                ../img/lleida-vertical.png?as=webp&width=300 1x,
                 ../img/lleida-vertical.png?as=webp&width=600 2x
               "
               type="image/webp"
@@ -223,9 +223,14 @@
               type="image/webp"
             />
             <img
-              src="../img/lleida-horizontal.png?width=800"
+              src="../img/lleida-vertical.png?as=webp&width=300"
               alt="Panorámica del río Segre y la Seu Vella"
               loading="lazy"
+              srcset="
+                ../img/lleida-vertical.png?as=webp&width=300 300w,
+                ../img/lleida-vertical.png?as=webp&width=600 600w
+              "
+              sizes="(max-width: 600px) 90vw, 800px"
             />
           </picture>
         </div>
